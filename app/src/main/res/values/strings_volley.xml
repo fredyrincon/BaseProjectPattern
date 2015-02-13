@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="generic_server_down">Server is down. Please try later.</string>
+    <string name="generic_error">Server error. Please try again.</string>
+    <string name="no_internet">No internet connection. Please try again.</string>
+    <string name="generic_auth_error">Login was unsuccessful. Please try again.</string>
+</resources>

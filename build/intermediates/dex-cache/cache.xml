@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\classes-88275fa554c9018c3a82b73563d72108175e416f.jar" />
+    </item>
+    <item
+        jar="C:\Users\frincon\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\gson-2.3.1-b39712d1daf916e458a1f65ed3e2a67fef2c1013.jar" />
+    </item>
+    <item
+        jar="C:\Users\frincon\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\eventbus-2.4.0-8d9144c679bcd9de2089af4e09333cd97dbf644b.jar" />
+    </item>
+    <item
+        jar="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\classes-2336db33cee0c9879dac1970af0512686856441c.jar" />
+    </item>
+    <item
+        jar="C:\Users\frincon\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-core\4.48\e579bd2905d0399af5029aaaf9817d5fa0ca88a5\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\ormlite-core-4.48-3f16b5852dcb51f7eb14035f54206037693c94c7.jar" />
+    </item>
+    <item
+        jar="E:\Projects\android_workspace\BaseProjectPattern\app\src\main\java\third_party\glide-3.2.0a.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="928ac110da755d5728af29ea5abb84b9e5e01086">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\glide-3.2.0a-9f767acfe37ad15c38acd1cb6ef1746220a97998.jar" />
+    </item>
+    <item
+        jar="E:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\support-annotations-21.0.3-704a340b9af7bcb3c02ad95d5aa67056e7d6206d.jar" />
+    </item>
+    <item
+        jar="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\internal_impl-21.0.3-13b2422eb085937c316bbf81db3b893c275bb2f8.jar" />
+    </item>
+    <item
+        jar="C:\Users\frincon\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="E:\Projects\android_workspace\BaseProjectPattern\app\build\intermediates\pre-dexed\dev\debug\ormlite-android-4.48-57804435ad8334711ebe9564abff5b70878d8dda.jar" />
+    </item>
+
+</items>

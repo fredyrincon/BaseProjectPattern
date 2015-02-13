@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_source_key">DATA_SOURCE_LOCAL</string>
+
+    <string name="service_key">SERVICE_LOCAL</string>
+    <string name="data_web_service_url">http://192.168.137.1:8090/</string>
+
+    <string name="testWebServiceCloudTest_expected">DummyLocalServiceName  DummyLocalServiceLastName</string>
+
+</resources>
