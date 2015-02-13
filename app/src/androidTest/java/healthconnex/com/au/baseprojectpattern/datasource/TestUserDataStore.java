@@ -24,6 +24,11 @@ public class TestUserDataStore  implements IUserDataStore {
         return userDummy;
     }
 
+    @Override
+    public boolean addUser(User user) {
+        return false;
+    }
+
     public ArrayList<User> getUserByOrganisation(String organisationName) {
         ArrayList <User> listByOrganization = new ArrayList<User>();
         User userDummy1 = new User(1, "Test", "Abbort", "HDNS");
