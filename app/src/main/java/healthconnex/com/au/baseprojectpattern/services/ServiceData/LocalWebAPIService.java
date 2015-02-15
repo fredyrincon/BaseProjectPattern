@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import healthconnex.com.au.baseprojectpattern.base.Config;
 import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.model.User;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
+import volley.IErrorVolleyCallBack;
 
 /**
  * Created by frincon on 11/02/2015.

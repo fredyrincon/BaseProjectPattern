@@ -1,4 +1,4 @@
-package healthconnex.com.au.volley;
+package volley;
 
 import android.content.Context;
 import android.util.Log;
@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import healthconnex.com.au.baseprojectpattern.R;
-import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 
 /**
  * Created by frincon on 11/02/2015.

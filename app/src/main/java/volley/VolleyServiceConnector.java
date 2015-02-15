@@ -1,4 +1,4 @@
-package healthconnex.com.au.volley;
+package volley;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

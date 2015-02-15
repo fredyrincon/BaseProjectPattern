@@ -10,7 +10,7 @@ import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.ServiceDataFactory;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
+import volley.IErrorVolleyCallBack;
 
 /**
  * Created by frincon on 11/02/2015.

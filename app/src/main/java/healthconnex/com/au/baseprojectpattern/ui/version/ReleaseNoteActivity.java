@@ -15,7 +15,7 @@ import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.R;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.adaptor.ReleaseNoteAdapter;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
+import volley.IErrorVolleyCallBack;
 
 public class ReleaseNoteActivity extends BaseActivity implements IWebAPIService.UserWebServiceCallback, IErrorVolleyCallBack {
 

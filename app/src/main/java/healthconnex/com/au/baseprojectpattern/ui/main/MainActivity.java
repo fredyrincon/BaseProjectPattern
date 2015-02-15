@@ -23,7 +23,7 @@ import healthconnex.com.au.baseprojectpattern.repository.userdata.IUserRepositor
 import healthconnex.com.au.baseprojectpattern.repository.UserDataRepository;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.ui.version.ReleaseNoteActivity;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
+import volley.IErrorVolleyCallBack;
 
 
 public class MainActivity extends BaseActivity implements IUserRepository.UserDetailsCallback, IUserRepository.UserListCallback , IWebAPIService.UserWebServiceCallback, IErrorVolleyCallBack{

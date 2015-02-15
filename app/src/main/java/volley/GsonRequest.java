@@ -1,4 +1,4 @@
-package healthconnex.com.au.volley;
+package volley;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;

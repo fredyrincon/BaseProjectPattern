@@ -16,10 +16,10 @@ import healthconnex.com.au.baseprojectpattern.base.Config;
 import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.R;
-import healthconnex.com.au.volley.ErrorListenerVolley;
-import healthconnex.com.au.volley.GsonRequest;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
-import healthconnex.com.au.volley.MyVolleySingleton;
+import volley.ErrorListenerVolley;
+import volley.GsonRequest;
+import volley.IErrorVolleyCallBack;
+import volley.MyVolleySingleton;
 
 import static healthconnex.com.au.baseprojectpattern.util.LogUtils.makeLogTag;
 

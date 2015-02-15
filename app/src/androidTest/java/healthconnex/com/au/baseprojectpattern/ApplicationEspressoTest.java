@@ -17,7 +17,7 @@ import healthconnex.com.au.baseprojectpattern.servicesource.TestWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.WebAPIService;
 import healthconnex.com.au.baseprojectpattern.ui.main.MainActivity;
-import healthconnex.com.au.volley.IErrorVolleyCallBack;
+import volley.IErrorVolleyCallBack;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;

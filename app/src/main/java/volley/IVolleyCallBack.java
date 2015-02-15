@@ -1,4 +1,4 @@
-package healthconnex.com.au.volley;
+package volley;
 
 /**
  * Created by frincon on 11/02/2015.
