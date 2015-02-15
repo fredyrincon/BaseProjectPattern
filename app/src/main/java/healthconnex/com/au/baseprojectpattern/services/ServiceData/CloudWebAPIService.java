@@ -18,6 +18,7 @@ import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.R;
 import healthconnex.com.au.volley.ErrorListenerVolley;
 import healthconnex.com.au.volley.GsonRequest;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 import healthconnex.com.au.volley.MyVolleySingleton;
 
 import static healthconnex.com.au.baseprojectpattern.util.LogUtils.makeLogTag;
@@ -46,14 +47,14 @@ public class CloudWebAPIService implements IServiceData {
 
     //GET api/TestWeb/UserInformation?userName={userName}
     @Override
-    public void getUserInformation(String userName, UserWebServiceCallback userServiceCallback) {
+    public void getUserInformation(String userName, UserWebServiceCallback userServiceCallback, IErrorVolleyCallBack iErrorVolleyCallBack) {
 
         Map<String, String> hashParameters = new HashMap<String, String>();
         hashParameters.put("userName",userName);
 
         String apiServiceURL = generateAPIServiceURL("TestWeb", "UserInformation" , hashParameters);
         try {
-            GsonRequest <User> myReq = new GsonRequest<User>(Request.Method.GET, apiServiceURL, User.class, null, requestSuccessListenerGetUserInformation(userServiceCallback), new ErrorListenerVolley(userServiceCallback, context)); //need to solve the error and make it generic
+            GsonRequest <User> myReq = new GsonRequest<User>(Request.Method.GET, apiServiceURL, User.class, null, requestSuccessListenerGetUserInformation(userServiceCallback), new ErrorListenerVolley(iErrorVolleyCallBack, context)); //need to solve the error and make it generic
             MyVolleySingleton.getInstance(context).addToRequestQueue(myReq, TAG);
         } catch (Exception e ) {
             userServiceCallback.onErrorService(e);
@@ -77,7 +78,7 @@ public class CloudWebAPIService implements IServiceData {
 
     //GET api/TestWeb/ReleaseNotes?appName={appName}&organizationName={organizationName}&versionCode={versionCode}
     @Override
-    public void getReleaseNote(String appName, String organization, String versionCode, UserWebServiceCallback userServiceCallback) {
+    public void getReleaseNote(String appName, String organization, String versionCode, UserWebServiceCallback userServiceCallback, IErrorVolleyCallBack iErrorVolleyCallBack) {
 
         Map<String, String> hashParameters = new HashMap<String, String>();
         hashParameters.put("appName",appName);
@@ -87,7 +88,7 @@ public class CloudWebAPIService implements IServiceData {
         String apiServiceURL = generateAPIServiceURL("TestWeb", "ReleaseNotes" , hashParameters);
 
         try {
-            GsonRequest <ReleaseNoteItem[]> myReq = new GsonRequest<ReleaseNoteItem[]>(Request.Method.GET, apiServiceURL, ReleaseNoteItem[].class, null, requestSuccessListenerGetReleaseNote(userServiceCallback), new ErrorListenerVolley(userServiceCallback, context)); //need to solve the error and make it generic
+            GsonRequest <ReleaseNoteItem[]> myReq = new GsonRequest<ReleaseNoteItem[]>(Request.Method.GET, apiServiceURL, ReleaseNoteItem[].class, null, requestSuccessListenerGetReleaseNote(userServiceCallback), new ErrorListenerVolley(iErrorVolleyCallBack, context)); //need to solve the error and make it generic
             MyVolleySingleton.getInstance(context).addToRequestQueue(myReq, TAG);
         } catch (Exception e ) {
             userServiceCallback.onErrorService(e);

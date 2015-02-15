@@ -15,8 +15,9 @@ import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.R;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.adaptor.ReleaseNoteAdapter;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 
-public class ReleaseNoteActivity extends BaseActivity implements IWebAPIService.UserWebServiceCallback {
+public class ReleaseNoteActivity extends BaseActivity implements IWebAPIService.UserWebServiceCallback, IErrorVolleyCallBack {
 
     private ListView releaseNotesList;
     private TextView titleRelease;
@@ -65,7 +66,7 @@ public class ReleaseNoteActivity extends BaseActivity implements IWebAPIService.
     //Function to get the data from the server
     public void getReleaseNoteData() {
         //Release note WebService
-        webAPIService.getReleaseNote("MCM","HealthConnex", "1.1.1",this);
+        webAPIService.getReleaseNote("MCM","HealthConnex", "1.1.1",this, this);
     }
 
 
@@ -80,15 +81,15 @@ public class ReleaseNoteActivity extends BaseActivity implements IWebAPIService.
     }
 
     @Override
-    public void volleyReponseError(String message) {
-
-    }
-
-    @Override
     public void onReleaseNoteLoaded(ArrayList<ReleaseNoteItem> releaseNoteList) {
 
         adapter = new ReleaseNoteAdapter(this, releaseNoteList);
         releaseNotesList.setAdapter(adapter);
+
+    }
+
+    @Override
+    public void volleyResponseError(String messageError) {
 
     }
 }

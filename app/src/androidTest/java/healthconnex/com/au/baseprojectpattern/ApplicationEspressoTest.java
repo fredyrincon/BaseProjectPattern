@@ -5,9 +5,11 @@ import android.support.test.espresso.assertion.ViewAssertions;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 
+import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
 import healthconnex.com.au.baseprojectpattern.commun.ErrorBundle;
+import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.datasource.TestUserDataStore;
 import healthconnex.com.au.baseprojectpattern.repository.UserDataRepository;
@@ -15,6 +17,7 @@ import healthconnex.com.au.baseprojectpattern.servicesource.TestWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.WebAPIService;
 import healthconnex.com.au.baseprojectpattern.ui.main.MainActivity;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -73,9 +76,10 @@ public class ApplicationEspressoTest extends ActivityInstrumentationTestCase2<Ma
 
         //Create Call back to be able to manage call back pattern
         IWebAPIService.UserWebServiceCallback callBackTest = new CallBackTest(latch,resultExpectedCompleteName);
+        IErrorVolleyCallBack volleyErrorCallBack = new CallBackTest(latch, resultExpectedCompleteName);
 
         WebAPIService webAPIService = WebAPIService.getInstance(activity, activity.getString(R.string.service_key));
-        webAPIService.getUserInformation("MARCOS",callBackTest);
+        webAPIService.getUserInformation("MARCOS",callBackTest,volleyErrorCallBack);
 
     }
 
@@ -93,17 +97,18 @@ public class ApplicationEspressoTest extends ActivityInstrumentationTestCase2<Ma
 
         //Create Call back to be able to manage call back pattern
         IWebAPIService.UserWebServiceCallback callBackTest = new CallBackTest(latch, resultExpectedCompleteName);
+        IErrorVolleyCallBack volleyErrorCallBack = new CallBackTest(latch, resultExpectedCompleteName);
 
         //Execute Aych test that call the webService
         TestWebAPIService testWebAPIService = new TestWebAPIService(activity);
         WebAPIService webAPIService = WebAPIService.getInstance(activity, testWebAPIService);
-        webAPIService.getUserInformation("MARCOS",callBackTest);
+        webAPIService.getUserInformation("MARCOS",callBackTest, volleyErrorCallBack);
 
         latch.await();// wait for callback
 
     }
 
-    class CallBackTest implements  IWebAPIService.UserWebServiceCallback {
+    class CallBackTest implements  IWebAPIService.UserWebServiceCallback, IErrorVolleyCallBack {
 
         private CountDownLatch latch;
         private String resultExpected;
@@ -131,11 +136,17 @@ public class ApplicationEspressoTest extends ActivityInstrumentationTestCase2<Ma
         }
 
         @Override
-        public void volleyReponseError(String message) {
+        public void onReleaseNoteLoaded(ArrayList<ReleaseNoteItem> releaseNoteList) {
+
+        }
+
+        @Override
+        public void volleyResponseError(String messageError) {
             assertEquals(true,false);//Launch error
             latch.countDown();// notify the count down latch
         }
     }
+
 
 
 

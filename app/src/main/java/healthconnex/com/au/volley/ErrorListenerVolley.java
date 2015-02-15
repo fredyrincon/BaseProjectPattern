@@ -26,18 +26,18 @@ import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 public class ErrorListenerVolley implements Response.ErrorListener {
 
     //private IVolleyCallBack iVolleyCallBack;
-    private IServiceData.UserWebServiceCallback iVolleyCallBack;
+    private IErrorVolleyCallBack iErrorVolleyCallBack;
     private Context context;
 
-    public ErrorListenerVolley(IServiceData.UserWebServiceCallback iVolleyCallBack, Context context) {
-        this.iVolleyCallBack = iVolleyCallBack;
+    public ErrorListenerVolley(IErrorVolleyCallBack iErrorVolleyCallBack, Context context) {
+        this.iErrorVolleyCallBack = iErrorVolleyCallBack;
         this.context = context;
     }
 
     @Override
     public void onErrorResponse(VolleyError arg0) {
         String messageError = getMessage(arg0);
-        iVolleyCallBack.volleyReponseError(messageError);
+        iErrorVolleyCallBack.volleyResponseError(messageError);
     }
 
     //Function to get the appropiate message

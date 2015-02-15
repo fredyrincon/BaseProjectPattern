@@ -23,9 +23,10 @@ import healthconnex.com.au.baseprojectpattern.repository.userdata.IUserRepositor
 import healthconnex.com.au.baseprojectpattern.repository.UserDataRepository;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.ui.version.ReleaseNoteActivity;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 
 
-public class MainActivity extends BaseActivity implements IUserRepository.UserDetailsCallback, IUserRepository.UserListCallback , IWebAPIService.UserWebServiceCallback{
+public class MainActivity extends BaseActivity implements IUserRepository.UserDetailsCallback, IUserRepository.UserListCallback , IWebAPIService.UserWebServiceCallback, IErrorVolleyCallBack{
 
     public TextView mResult;
 
@@ -106,7 +107,7 @@ public class MainActivity extends BaseActivity implements IUserRepository.UserDe
     public void testCloudData(View v) {
 
         //Test the webservice
-        webAPIService.getUserInformation("Marcos Toro",this);
+        webAPIService.getUserInformation("Marcos Toro",this, this);
 
         /*UserDataRepository.resetInstance();
         CloudUserDataStore cloudUserDataStore = new CloudUserDataStore(this);
@@ -153,16 +154,16 @@ public class MainActivity extends BaseActivity implements IUserRepository.UserDe
     }
 
     @Override
-    public void volleyReponseError(String message) {
-        String resultTest = "error from " + getString(R.string.service_key)+ " : " + message;
-        Log.e("", resultTest);
-        mResult.setText(resultTest);
-    }
-
-    @Override
     public void onReleaseNoteLoaded(ArrayList<ReleaseNoteItem> releaseNoteList) {
         //Show the information of the release note
 
 
+    }
+
+    @Override
+    public void volleyResponseError(String messageError) {
+        String resultTest = "error from " + getString(R.string.service_key)+ " : " + messageError;
+        Log.e("", resultTest);
+        mResult.setText(resultTest);
     }
 }

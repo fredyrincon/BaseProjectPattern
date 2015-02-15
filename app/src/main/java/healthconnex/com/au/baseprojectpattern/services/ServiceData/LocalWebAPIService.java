@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import healthconnex.com.au.baseprojectpattern.base.Config;
 import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.model.User;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 
 /**
  * Created by frincon on 11/02/2015.
@@ -20,7 +21,7 @@ public class LocalWebAPIService implements IServiceData {
     }
 
     @Override
-    public void getUserInformation(String userName, UserWebServiceCallback userServiceCallback) {
+    public void getUserInformation(String userName, UserWebServiceCallback userServiceCallback, IErrorVolleyCallBack iErrorVolleyCallBack) {
         //Create a dummy user
         try {
             User userDummy = new User(1, "DummyLocalServiceName", "DummyLocalServiceLastName", "Telstra");
@@ -31,7 +32,7 @@ public class LocalWebAPIService implements IServiceData {
     }
 
     @Override
-    public void getReleaseNote(String appName, String organization, String versionCode, UserWebServiceCallback userServiceCallback) {
+    public void getReleaseNote(String appName, String organization, String versionCode, UserWebServiceCallback userServiceCallback, IErrorVolleyCallBack iErrorVolleyCallBack) {
         try {
             ArrayList <ReleaseNoteItem> listRelease = new ArrayList<ReleaseNoteItem>();
             listRelease.add(new ReleaseNoteItem("MCM_Video", "2.0.0", Config.RELEASE_ITEM_FIX, "Release 1 fix"));

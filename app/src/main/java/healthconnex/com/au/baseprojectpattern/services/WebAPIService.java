@@ -10,6 +10,7 @@ import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.ServiceDataFactory;
+import healthconnex.com.au.volley.IErrorVolleyCallBack;
 
 /**
  * Created by frincon on 11/02/2015.
@@ -56,7 +57,7 @@ public class WebAPIService implements IWebAPIService {
     //-----------------------------------------------------------------------------------------------------------------
 
     @Override
-     public void getUserInformation(String userName, final UserWebServiceCallback userServiceCallback) {
+     public void getUserInformation(String userName, final UserWebServiceCallback userServiceCallback, final IErrorVolleyCallBack iErrorVolleyCallBack) {
         iServiceData.getUserInformation(userName, new IServiceData.UserWebServiceCallback() {
             @Override
             public void onUserServiceDataLoaded(User userInfo) {
@@ -69,20 +70,15 @@ public class WebAPIService implements IWebAPIService {
             }
 
             @Override
-            public void volleyReponseError(String message) {
-                userServiceCallback.volleyReponseError(message);
-            }
-
-            @Override
             public void onReleaseNoteLoaded(ArrayList<ReleaseNoteItem> releaseNoteList) {
 
             }
-        });
+        }, iErrorVolleyCallBack);
     }
 
     //Function to get the release  note list
     @Override
-    public void getReleaseNote(String appName, String organization, String versionCode, final UserWebServiceCallback userServiceCallback) {
+    public void getReleaseNote(String appName, String organization, String versionCode, final UserWebServiceCallback userServiceCallback, final IErrorVolleyCallBack iErrorVolleyCallBack) {
         iServiceData.getReleaseNote(appName, organization, versionCode, new  IServiceData.UserWebServiceCallback() {
 
             @Override
@@ -95,16 +91,12 @@ public class WebAPIService implements IWebAPIService {
 
             }
 
-            @Override
-            public void volleyReponseError(String message) {
-
-            }
 
             @Override
             public void onReleaseNoteLoaded(ArrayList<ReleaseNoteItem> releaseNoteList) {
                 userServiceCallback.onReleaseNoteLoaded(releaseNoteList);
             }
-        });
+        }, iErrorVolleyCallBack);
     }
 
 
