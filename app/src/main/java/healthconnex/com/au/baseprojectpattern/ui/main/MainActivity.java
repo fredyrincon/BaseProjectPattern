@@ -7,11 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
+import de.greenrobot.event.EventBus;
 import healthconnex.com.au.baseprojectpattern.base.BaseActivity;
+import healthconnex.com.au.baseprojectpattern.busevent.NetworkStateChanged;
 import healthconnex.com.au.baseprojectpattern.commun.ErrorBundle;
 import healthconnex.com.au.baseprojectpattern.datamodel.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.datamodel.User;
@@ -31,6 +34,8 @@ public class MainActivity extends BaseActivity implements IUserRepository.UserDe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EventBus.getDefault().register(this); // register EventBus
+
         //Get UI reference
         mResult = (TextView) findViewById(R.id.result);
 
@@ -40,6 +45,11 @@ public class MainActivity extends BaseActivity implements IUserRepository.UserDe
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this); // unregister EventBus
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,6 +71,16 @@ public class MainActivity extends BaseActivity implements IUserRepository.UserDe
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    // method that will be called when someone posts an event NetworkStateChanged
+    public void onEventMainThread(NetworkStateChanged event) {
+        if (!event.isInternetConnected()) {
+            Toast.makeText(this, "EventBus - No Internet connection!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "EventBus - Internet connection is up!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     //print the information of the datasource local
