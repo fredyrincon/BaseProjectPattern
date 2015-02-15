@@ -1,4 +1,4 @@
-package healthconnex.com.au.baseprojectpattern.datamodel;
+package healthconnex.com.au.baseprojectpattern.model;
 
 /**
  * Created by frincon on 12/02/2015.

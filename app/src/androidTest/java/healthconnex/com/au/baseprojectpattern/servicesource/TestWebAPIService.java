@@ -2,7 +2,7 @@ package healthconnex.com.au.baseprojectpattern.servicesource;
 
 import android.content.Context;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 
 /**

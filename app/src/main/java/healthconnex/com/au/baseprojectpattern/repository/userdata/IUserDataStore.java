@@ -3,7 +3,7 @@ package healthconnex.com.au.baseprojectpattern.repository.userdata;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 
 /**
  * Created by frincon on 9/02/2015.

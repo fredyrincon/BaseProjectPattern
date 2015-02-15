@@ -6,7 +6,7 @@ import android.util.Log;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.repository.dao.DatabaseManager;
 
 import static healthconnex.com.au.baseprojectpattern.util.LogUtils.makeLogTag;

@@ -4,7 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.repository.userdata.IUserDataStore;
 
 /**

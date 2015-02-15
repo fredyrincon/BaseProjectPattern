@@ -1,10 +1,7 @@
 package healthconnex.com.au.baseprojectpattern.repository.dao;
 
 import android.content.Context;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
 
 /**
  * Created by frincon on 13/02/2015.

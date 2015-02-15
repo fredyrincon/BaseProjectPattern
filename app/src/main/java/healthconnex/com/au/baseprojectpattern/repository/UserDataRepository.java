@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import healthconnex.com.au.baseprojectpattern.commun.RepositoryErrorBundle;
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.repository.userdata.IUserDataStore;
 import healthconnex.com.au.baseprojectpattern.repository.userdata.IUserRepository;
 import healthconnex.com.au.baseprojectpattern.repository.userdata.UserDataStoreFactory;

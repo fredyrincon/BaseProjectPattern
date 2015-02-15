@@ -13,8 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import healthconnex.com.au.baseprojectpattern.base.Config;
-import healthconnex.com.au.baseprojectpattern.datamodel.ReleaseNoteItem;
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.R;
 import healthconnex.com.au.volley.ErrorListenerVolley;
 import healthconnex.com.au.volley.GsonRequest;

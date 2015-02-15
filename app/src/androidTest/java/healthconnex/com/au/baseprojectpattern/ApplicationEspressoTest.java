@@ -8,7 +8,7 @@ import android.util.Log;
 import java.util.concurrent.CountDownLatch;
 
 import healthconnex.com.au.baseprojectpattern.commun.ErrorBundle;
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.datasource.TestUserDataStore;
 import healthconnex.com.au.baseprojectpattern.repository.UserDataRepository;
 import healthconnex.com.au.baseprojectpattern.servicesource.TestWebAPIService;

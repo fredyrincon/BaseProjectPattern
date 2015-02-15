@@ -5,7 +5,7 @@ import android.support.test.espresso.assertion.ViewAssertions;
 import android.test.ActivityInstrumentationTestCase2;
 import android.util.Log;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.datasource.TestProductionUserDataStore;
 import healthconnex.com.au.baseprojectpattern.datasource.TestUserDataStore;
 import healthconnex.com.au.baseprojectpattern.repository.UserDataRepository;

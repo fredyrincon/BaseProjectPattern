@@ -5,8 +5,8 @@ import android.content.Context;
 import java.util.ArrayList;
 
 import healthconnex.com.au.baseprojectpattern.commun.RepositoryErrorBundle;
-import healthconnex.com.au.baseprojectpattern.datamodel.ReleaseNoteItem;
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
+import healthconnex.com.au.baseprojectpattern.model.User;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IServiceData;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.IWebAPIService;
 import healthconnex.com.au.baseprojectpattern.services.ServiceData.ServiceDataFactory;

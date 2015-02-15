@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import healthconnex.com.au.baseprojectpattern.base.Config;
-import healthconnex.com.au.baseprojectpattern.datamodel.ReleaseNoteItem;
+import healthconnex.com.au.baseprojectpattern.model.ReleaseNoteItem;
 import healthconnex.com.au.baseprojectpattern.R;
 
 /**

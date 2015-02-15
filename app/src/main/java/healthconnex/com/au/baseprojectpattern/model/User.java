@@ -1,4 +1,4 @@
-package healthconnex.com.au.baseprojectpattern.datamodel;
+package healthconnex.com.au.baseprojectpattern.model;
 
 import com.google.gson.Gson;
 import com.j256.ormlite.field.DatabaseField;

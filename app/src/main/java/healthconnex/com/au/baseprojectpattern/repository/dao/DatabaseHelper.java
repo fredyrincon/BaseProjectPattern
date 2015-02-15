@@ -13,7 +13,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
-import healthconnex.com.au.baseprojectpattern.datamodel.User;
+import healthconnex.com.au.baseprojectpattern.model.User;
 
 /**
  * Created by frincon on 13/02/2015.
@@ -57,6 +57,18 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
                     //allSql.add("alter table AdData add column `new_col` VARCHAR");
                     //allSql.add("alter table AdData add column `new_col2` VARCHAR");
             }
+
+            /*
+            if (oldVersion < 2) {
+                // we added the age column in version 2
+                dao.executeRaw("ALTER TABLE `account` ADD COLUMN age INTEGER;");
+            }
+            if (oldVersion < 3) {
+                // we added the weight column in version 3
+                dao.executeRaw("ALTER TABLE `account` ADD COLUMN weight INTEGER;");
+            }
+
+            */
             for (String sql : allSql) {
                 db.execSQL(sql);
             }
